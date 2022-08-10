@@ -1,0 +1,25 @@
+Currency Exchange URL = http://localhost:8000/currency-exchange/from/USD/to/INR
+
+
+Currency Conversion URL = http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
+
+
+Eureka:
+http://localhost:8761
+
+API Gateway:
+http://localhost:8765
+
+
+http://localhost:8765/CURRENCY-CONVERSION/currency-conversion/from/USD/to/INR/quantity/10
+http://localhost:8765/CURRENCY-CONVERSION/currency-conversion-feign/from/EUR/to/INR/quantity/10
+
+
+
+
+http://localhost:8765/CURRENCY-EXCHANGE/currency-exchange/from/USD/to/INR
+
+
+for lower case API gateway URLs: 
+spring.cloud.gateway.discovery.locator.lower-case-service-id=true (in API GATEWAY's application.properties)
+http://localhost:8765/currency-conversion/currency-conversion-feign/from/EUR/to/INR/quantity/10
